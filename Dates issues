@@ -1,9 +1,29 @@
 
-1-UTF
-2-Between
-3-Cast
+1-RANGE
+2-BETWEEN
+3-UTF
+4-Cast
+
+
+
+RANGE:
+---------
+
+DECLARE @StartDate datetime,
+@EndDate datetime
+SELECT @StartDate = '08/25/2019'
+SELECT @EndDate = '08/26/2019'
+
 
 
 Select  event,* FROM FreightVerifyExportVehicleVisibility
+Where CreationDate >=  @StartDate
+AND CreationDate < DATEADD(day,1,@EndDate)
+
+
+CAST:
+Select  event,* FROM FreightVerifyExportVehicleVisibility
 where ExportedInd =1
 and CAST(creationdate as date) ='08/26/2019'
+
+
