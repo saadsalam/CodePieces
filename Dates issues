@@ -1,0 +1,9 @@
+
+1-UTF
+2-Between
+3-Cast
+
+
+Select  event,* FROM FreightVerifyExportVehicleVisibility
+where ExportedInd =1
+and CAST(creationdate as date) ='08/26/2019'
