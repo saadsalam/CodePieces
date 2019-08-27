@@ -19,6 +19,16 @@ SELECT STUFF('SQL Tutorial', 1, 3, 'HTML');
 
 Reult:HTML Tutorial
 
+UTC:
+ Select Top 20  ShipToEarlyArrival,
+ STUFF(CONVERT(VARCHAR(50), (DATEADD(ss,-1 *DATEDIFF(ss,GETUTCDATE(),GETDATE()),ShipToEarlyArrival)), 127), 19, 4, '') + 'Z' AS 
+ ShipToEarlyArrival
+
+Result:
+
+2019-06-08 00:45:37.147		2019-06-08T04:45:37Z
+2019-06-08 00:45:37.147		2019-06-08T04:45:37Z
+
 
 Len and DataLength:
 ----------------
