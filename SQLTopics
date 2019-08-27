@@ -1,0 +1,15 @@
+PAtindex
+--------------
+
+
+SELECT PATINDEX('%schools%', 'W3Schools.com');
+Result: 3
+
+
+Stuff
+------
+The STUFF() function deletes a part of a string and then inserts another part into the string, starting at a specified position.
+
+SELECT STUFF('SQL Tutorial', 1, 3, 'HTML');
+
+Reult:HTML Tutorial
