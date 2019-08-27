@@ -5,6 +5,11 @@ Return the position of a pattern in a string:
 SELECT PATINDEX('%schools%', 'W3Schools.com');
 Result: 3
 
+Select Top 20 * from VehicleDamageDetail VDD
+WHERE
+PATINDEX('%[[0-9][[0-9][[0-9][[0-9][[0-9]%',VDD.DamageCode) > 0
+			  
+
 
 Stuff
 ------
@@ -13,3 +18,18 @@ The STUFF() function deletes a part of a string and then inserts another part in
 SELECT STUFF('SQL Tutorial', 1, 3, 'HTML');
 
 Reult:HTML Tutorial
+
+
+Len and DataLength:
+----------------
+leading spaces: Spaces in the begining.
+trailing blanks : Spaces at the end.
+One difference between the LEN() and DATALENGTH() functions is that the LEN() function excludes trailing blanks
+(trailing spaces, tabs, etc) whereas DATALENGTH() includes trailing blanks. 
+Note, we’re only talking about blanks that come at the end of the string – not at the start or in the middle.
+
+SELECT  LEN('Lit ') AS Len,    DATALENGTH('Lit ') AS DataLength;
+Result:
+Len  DataLength
+---  ----------
+3    4  
