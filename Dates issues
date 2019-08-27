@@ -33,8 +33,10 @@ Where cast(CreationDate as Date) BETWEEN @StartDate AND @EndDate
 
 Different Date Formats:
 -----------------------
-	With century	  Input/Output	Standard
-	101	 mm/dd/yyyy	 US
+	With century	  			Input/Output	Standard
+	101	 mm/dd/yyyy	 		US
+	127	yyyy-mm-ddThh:mi:ss.mmmZ	ISO8601 (with time zone Z)
+	
 
 
 
