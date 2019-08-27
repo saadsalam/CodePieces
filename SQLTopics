@@ -1,6 +1,6 @@
 PAtindex
 --------------
-
+Return the position of a pattern in a string:
 
 SELECT PATINDEX('%schools%', 'W3Schools.com');
 Result: 3
