@@ -3,7 +3,7 @@
 2-RANGE
 3-BETWEEN
 4-UTF
-
+5-Date Formats
 
 CAST:
 ------
@@ -31,7 +31,10 @@ Select  event,* FROM FreightVerifyExportVehicleVisibility
 Where cast(CreationDate as Date) BETWEEN @StartDate AND @EndDate
 
 
-
+Different Date Formats:
+-----------------------
+	With century	  Input/Output	Standard
+	101	 mm/dd/yyyy	 US
 
 
 
