@@ -1,0 +1,5 @@
+Split leg used as a middle point.
+From Point A to B and C.
+
+* Vehicles are created once in vehicle table(One pickupID and One DropOff ID).
+*Two  legs are created in legs.
