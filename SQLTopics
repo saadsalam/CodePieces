@@ -54,3 +54,11 @@ Result:
 Len  DataLength
 ---  ----------
 3    4  
+
+
+INSERT INTO
+-----------
+INSERT INTO daidbvpc..csascore(PeriodEndDate,UnsafeDriving,HOSCompliance,DriverFitness,VehicleMaintenance,CrashIndicator,CreationDate,CreatedBy)
+Select  PeriodEndDate,UnsafeDriving,HOSCompliance,DriverFitness,VehicleMaintenance,CrashIndicator,CreationDate,CreatedBy
+from Daidb..csascore
+
