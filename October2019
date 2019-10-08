@@ -12,3 +12,15 @@ https://www.tutorialspoint.com/Bootstrap-Collapsible-panel
 How To Create Cascading Dropdownlist In Asp.Net MVC | Using Jquery Ajax
 -----------------------------------------------
 http://abctutorial.com/Post/26/how-to-create-cascading-dropdownlist-in-aspnet-mvc-%7C-using-jquery-ajax
+
+
+ //Convert every -ve number to zero and keep the +ve number as it is.
+  ----------------------------------------------------------------
+  MessageBox.Show(Convert.ToString(Math.Max(0, -2.4)));
+ 
+//await and DownloadataskAsync
+----------------------------------
+
+var client = new WebClient();
+var imageData = await client.DownloadDataTaskAsync("https://ichef.bbci.co.uk/news/624/cpsprodpb/BD78/production/_108740584_comp.jpg");
+pictureBox1.Image = Image.FromStream(new MemoryStream(imageData));
