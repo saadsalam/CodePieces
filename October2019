@@ -24,3 +24,14 @@ http://abctutorial.com/Post/26/how-to-create-cascading-dropdownlist-in-aspnet-mv
 var client = new WebClient();
 var imageData = await client.DownloadDataTaskAsync("https://ichef.bbci.co.uk/news/624/cpsprodpb/BD78/production/_108740584_comp.jpg");
 pictureBox1.Image = Image.FromStream(new MemoryStream(imageData));
+
+
+Table expression Example:
+---------------------------
+With
+CTE as ( Select  * from users)
+Select * from CTE Where  usercode ='saad'
+
+Result:
+UserID	UserCode	FirstName	LastName	Password	PIN	Phone	PhoneExtension	CellPhone	FaxNumber	EmailAddress	LabelXOffset	LabelYOffset	IMEI	LastConnection	datsVersion	RecordStatus	CreationDate	CreatedBy	UpdatedDate	UpdatedBy	EmployeeNumber	PortPassIDNumber	Department	StraightTimeRate	PieceRateRate	PDIRate	FlatBenefitPayRate	AlternateEmailAddress	MustChangePW
+980	SAAD	Saad	Salam	saad1	saad	NULL	NULL	NULL	NULL	ssalam@diversifiedauto.com	0.00	0.00	NULL	NULL	NULL	Active	2012-10-17 10:27:15.000	COLIN	2015-08-26 10:09:34.000	SAAD	NULL	101712102715	NULL	NULL	NULL	NULL	NULL	saad.salam@diversifiedauto.com	0
