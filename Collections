@@ -1,0 +1,10 @@
+
+List
+
+dictionary
+
+Tuple
+
+
+ Dictionary< string, Tuple<string, string>> GMShipmentStringTuple = new Dictionary<string, Tuple<string, string>>();
+
