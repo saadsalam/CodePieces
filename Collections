@@ -1,9 +1,10 @@
 
 List
-
+Ienumerable
+Iquerable
 dictionary
-
 Tuple
+Structure
 
 
  Dictionary< string, Tuple<string, string>> GMShipmentStringTuple = new Dictionary<string, Tuple<string, string>>();
