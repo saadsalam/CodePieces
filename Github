@@ -1,1 +1,8 @@
-
+git init
+git push
+git add
+git clone
+git config
+git remote -v
+git commit
+git log
