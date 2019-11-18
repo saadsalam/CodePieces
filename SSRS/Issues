@@ -3,3 +3,5 @@
 An error has occurred during report processing.
 
 Ans: Fix the data source by putting credentials again
+Or
+(In some cases use the shared data source)
