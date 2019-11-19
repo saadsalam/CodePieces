@@ -13,3 +13,8 @@ Ans: Add another dataset and populate: Here two parameters(payperiod and year) c
 Select Top 1 PeriodNumber, CalendarYear, Cast(PeriodEndDate as Date) as PeriodEndDate FROM PayPeriod
 Where PeriodEndDate <CURRENT_TIMESTAMP
 Order By PeriodEndDate desc
+
+4-Adding a Sub report
+Select sub report from  toolbox and drop on the report and set the properties.
+
+5-Adding a Link report
