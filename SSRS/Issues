@@ -1,7 +1,15 @@
 
-1- Error occured
-An error has occurred during report processing.
-
+1- Error occured :An error has occurred during report processing.
 Ans: Fix the data source by putting credentials again
-Or
-(In some cases use the shared data source)
+Or (In some cases use the shared data source)
+
+2- Fields are not refreshing after the querry modified
+a-Goto dataset >Refresh querrry fields
+or delete rdl.data file particulare to that report  located in solution folder
+
+3- Passing parameters from the querry 
+Ans: Add another dataset and populate: Here two parameters(payperiod and year) coming from querry.
+
+Select Top 1 PeriodNumber, CalendarYear, Cast(PeriodEndDate as Date) as PeriodEndDate FROM PayPeriod
+Where PeriodEndDate <CURRENT_TIMESTAMP
+Order By PeriodEndDate desc
