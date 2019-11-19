@@ -26,3 +26,7 @@ or contain content that is not well-formed or not valid based on Reporting Servi
 
 Ans: If you have the solution > properties > TargetServerVersion set to SQL Server 2008 R2, 2012 or 2014 and then 
 upload the RDL from the bin folder instead of the project folder, it should work. I was getting the same error and that solved it.
+
+07- No upload file menu/buttton apperas
+Ans: Login with Admin : uname: Administraor /pwd: DAI~~Admin
+and than give the rights to particula user .
