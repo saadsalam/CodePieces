@@ -1,0 +1,10 @@
+Asmx
+ 1- <WebService(Namespace:="http://www.Move.com/")> 
+ 2- <WebMethod()>
+
+WCF
+(Data contracts and operation contracts)
+
+Web API
+
+(Controller and model)
