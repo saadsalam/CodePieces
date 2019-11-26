@@ -1,1 +1,4 @@
+Install Nodejs tools for visual studio
+Project>javascript project>nodejs console
+
 console.log('Hello world');
