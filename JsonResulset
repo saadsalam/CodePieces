@@ -1,0 +1,57 @@
+   public JsonResult BOL()
+        { 
+        SqlConnection cn = new SqlConnection(ConfigurationManager.ConnectionStrings["con"].ConnectionString);
+
+        cn.Open();
+
+            string strSQL = @"SELECT TOP 1 
+                        CompanyName,
+                        AddressLine1,
+                        ISNULL(AddressLine2,'') AS AddressLine2,
+                        City + ',  ' + State +'   ' + Zip AS CitySTZip,
+                        '(' + SUBSTRING(Phone,1,3) + ') ' + 
+                        SUBSTRING(Phone,4,3) + '-' + 
+                        SUBSTRING(Phone,7,DATALENGTH(Phone)-6) AS tel,
+                        (Select ValueDescription from settingtable where valuekey ='CompanyLogoURL') AS CompanyLogo                    
+                        FROM ApplicationConstants";
+
+
+        SqlDataAdapter dsAdapter = new SqlDataAdapter();
+        DataSet dsData = new DataSet();
+        SqlCommand sqlCmd;
+        DataSet ds;
+
+
+
+        sqlCmd = new SqlCommand
+            {
+                CommandText = strSQL,
+                CommandType = CommandType.Text,
+                CommandTimeout = 0
+            };
+
+    sqlCmd.Connection = cn;
+
+            dsAdapter.SelectCommand = sqlCmd;
+            dsAdapter.Fill(dsData);
+            ds = dsData;
+        
+
+        var    BOLHeaderInfo = ds.Tables[0].AsEnumerable().Select(dataRow => new BOL
+            {
+                CompanyName  = dataRow.Field<string>("CompanyName"),
+                AddressLine1 = dataRow.Field<string>("AddressLine1"),
+                AddressLine2 = dataRow.Field<string>("AddressLine2"),
+                CityStateZip = dataRow.Field<string>("CitySTZip"),
+                CompanyLogo= dataRow.Field<string>("tel"),
+                Telephone = dataRow.Field<string>("CompanyLogo")
+            }).ToList();
+
+          
+            cn.Close();
+
+         return Json(BOLHeaderInfo, JsonRequestBehavior.AllowGet);
+
+
+        }
+    }
