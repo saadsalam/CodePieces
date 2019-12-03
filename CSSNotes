@@ -2,7 +2,6 @@ video:
 How to create Navigation bar in Asp.Net with CSS:
 https://www.youtube.com/watch?v=xVgtAdxhIxk
 
-
 Differnce between ID and class.
 id usually inque.
 class may not
@@ -19,6 +18,13 @@ body{
 
 }
 
+3-----
+
+ #menu ul li a {
+            text-decoration: none;
+             color:#fff;
+              display:block;
+}
 css layout
 https://www.youtube.com/watch?v=552fTCIzOyc&list=PLr6-GrHUlVf9ZleRsd5oTcrziNglndsXW&index=12
 
@@ -34,3 +40,11 @@ html {
   scroll-behavior: smooth;
 }
 </style>
+
+  <div id="menu">
+    <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About Us</a></li>
+            </ul>
+  </div>
+
