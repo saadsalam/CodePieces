@@ -2,3 +2,45 @@
 2-Layout
 3-using view and using startup page
 4-Left side nav bar : ajax change the contents like balance point
+
+
+User login session example:
+
+Controller:
+------------------
+if (sdr.Read())
+ {
+        Session["username"] = Ulog.UserCode.ToString();
+        return RedirectToAction("Welcome");
+   }
+
+           else
+                {
+                    ViewData["Message"] = "User Login Details Failed !";
+                }
+
+
+
+Welcome.chtml
+-------------------
+
+@{
+    ViewBag.Title = "Welcome";
+}
+@if (Session["username"] != null)
+{
+    <h2>Welcome @Session["username"].ToString()</h2>
+}
+
+
+index.chtml
+--------
+  <div class="form-group">
+  <div class="col-md-offset-2 col-md-10">
+        <input type="submit" value="Login" class="btn btn-default" />
+            </div>
+           </div>
+        <h1>@Html.ViewData["Message"]</h1>
+
+    </div>
+}
