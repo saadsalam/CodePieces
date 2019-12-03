@@ -9,3 +9,14 @@ css layout
 https://www.youtube.com/watch?v=552fTCIzOyc&list=PLr6-GrHUlVf9ZleRsd5oTcrziNglndsXW&index=12
 
 
+smooth transition effect on jump link(within the page):
+------------------------------------
+
+https://www.w3schools.com/cssref/tryit.asp?filename=trycss_scroll_behavior
+
+
+<style>
+html {
+  scroll-behavior: smooth;
+}
+</style>
