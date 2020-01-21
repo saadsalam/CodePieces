@@ -1,0 +1,13 @@
+
+Create a user in Daitracker3 (e.g.  workgroup)
+username: Bob
+pwd:dai
+
+If the browser not open in
+http://daitracker3/ReportServer?%2FDispatch%2FDDTraineReport&rs%3AParameterLanguage=en-US #
+use this link 
+http://192.168.1.33/ReportServer?%2FDispatch%2FDDTraineReport&rs%3AParameterLanguage=en-US #
+
+
+
+
