@@ -1,0 +1,19 @@
+
+
+Public ActionResult CountryList()
+{
+
+
+IQueryable countries = Country.GetCounytries();
+
+if (HttpContext.Request.IsAjaxRequest())
+{
+return Json(new SelectList(
+countries, 
+"CountryCode",
+"CountryName"),jsonRequestBehavior.AllowGet
+}
+
+return View(countries);
+
+}
