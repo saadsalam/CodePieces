@@ -6,6 +6,10 @@ dictionary
 Tuple
 Structure
 
+GMFreightShipment GShipment = new GMFreightShipment();
+Dictionary<string, string> GMShipmentStringDict = new Dictionary<string, string>();
 
- Dictionary< string, Tuple<string, string>> GMShipmentStringTuple = new Dictionary<string, Tuple<string, string>>();
-
+Dictionary< string, Tuple<string, string>> GMShipmentStringTuple = new Dictionary<string, Tuple<string, string>>();
+ 
+ 
+ 
