@@ -1,0 +1,33 @@
+1-Finding Current and last payperiod
+-----------------------------------------
+declare @payPeriodId int;
+declare @payPeriodNum int;
+declare @now datetime ;
+
+Set @now = CURRENT_TIMESTAMP;
+
+--this is tricky, because there is only an end date, so use a CTE for PreviousEndDate alias
+WITH WellDefinedPayPeriod AS
+(
+	select PayPeriodID, PeriodNumber, PeriodEndDate, 
+		(select max(pp2.PeriodEndDate)
+		from PayPeriod pp2
+		where pp2.PeriodEndDate < pp1.PeriodEndDate) as PreviousEndDate
+	from PayPeriod pp1
+)
+
+//Select * from  WellDefinedPayPeriod 
+PayPeriodID	PeriodNumber	PeriodEndDate	PreviousEndDate
+209	          1	        2011-12-29      00:00:00.000	NULL
+210	          2	        2012-01-13 00:00:00.000	2011-12-29 00:00:00.000
+211	          3	        2012-01-27 00:00:00.000	2012-01-13 00:00:00.000
+
+
+select @payPeriodId=[PayPeriodId],@payPeriodNum=[PeriodNumber] 
+from WellDefinedPayPeriod 
+where @now > PreviousEndDate and @now <= PeriodEndDate
+
+print  @payPeriodId
+print @payPeriodNum
+422
+5
