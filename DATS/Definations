@@ -1,0 +1,15 @@
+
+When run is created and when legs are created?
+----------------------------------------------
+
+Ans: Run created when driver scans the vehicle.
+Run can be created manually from dats too. by changing loadstatus (
+delivered/enroute). 
+
+Loads,Legs,Vehicle,
+-------------------
+Vehicle,Legs are created simulatanously
+Loads are created afterward
+
+When runstops created?
+-----------------------
