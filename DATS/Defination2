@@ -1,0 +1,13 @@
+Split leg used as a middle point.
+From Point A to B and C.
+* Vehicles are created once in vehicle table(One pickupID and One DropOff ID).
+*
+*Two  legs are created in legs.
+*example of load number = 19095265
+
+A truck breakdown or a two destinations with ship from two truck (from intermediate location). One may be a outsidecarrier.
+What is common location:
+-----------------
+common locations are common pickup points(e.g Selkirk,Brookfield,) used by different customers.
+To find out the customer codes: use code tabl to enter their location codes.
+common locations may be a dropoff point too.
