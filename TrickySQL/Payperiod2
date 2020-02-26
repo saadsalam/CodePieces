@@ -1,0 +1,13 @@
+
+SELECT  'Current' as 'PayPeriod', Sum(Mileage) as 'MileagePay', Count(P.runid) as 'RunCount', Sum(TotalPay) as 'TotalPay'
+          FROM Driver D
+          LEFT JOIN Payroll P ON D.DriverID = P.DriverID
+          LEFT JOIN Users U ON D.UserID = U.UserID
+          LEFT JOIN Run R ON P.RunID = R.RunID
+          WHERE
+          P.PayPeriodYear = 
+          (Select Top 1 CalendarYear FROM PayPeriod Where PeriodClosedInd =0 Order by PeriodEndDate Asc)
+           AND P.PayPeriod = 
+          (Select Top 1 PeriodNumber FROM PayPeriod Where PeriodClosedInd =0 Order by PeriodEndDate Asc)                          
+           AND D.DriverNumber = {0}
+ 
