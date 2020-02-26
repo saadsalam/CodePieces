@@ -10,6 +10,6 @@ Loads,Legs,Vehicle,
 -------------------
 Vehicle,Legs are created simulatanously
 Loads are created afterward
-
 When runstops created?
 -----------------------
+Every pickup and delivery event creates the run stops
