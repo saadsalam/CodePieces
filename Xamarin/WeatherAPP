@@ -5,3 +5,7 @@ C:\mobileprojects\jasonweatherapp\WeatherApp\WeatherApp\WeatherApp.Android\obj\D
 solution: bug in VS
 use powershell
 1-Stop-Process -processname MSBuild
+
+2-Search bar
+
+3-xmlns:d?
