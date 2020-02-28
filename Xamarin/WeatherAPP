@@ -1,0 +1,7 @@
+Error:
+Severity Code Description Project File Line Suppression State Error error: 
+error while writing anim: obj\Debug\android\bin\classes\android\support\design\R$anim.class (The process cannot access the file because it is being used by another process) public static final class anim { WeatherApp.Android 
+C:\mobileprojects\jasonweatherapp\WeatherApp\WeatherApp\WeatherApp.Android\obj\Debug\android\src\android\support\design\R.java 11
+solution: bug in VS
+use powershell
+1-Stop-Process -processname MSBuild
