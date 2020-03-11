@@ -2,3 +2,12 @@
 -Is there a way to undo the 'exclude from project' operation in Visual Studio (2008) ?
 How to include files back into the project after excluding them?
 Ans:show all files and include in it
+
+-TFS - “Could not find part of path” error 
+C:\WPF Projects\ZonarAPICall\ZonarAPICall\FVVINMileStoneAPI\Class1.cs: 
+Could not find a part of the path 'C:\WPF Projects\ZonarAPICall\ZonarAPICall\FVVINMileStoneAPI\Class1.cs'.
+
+Solution:
+The error you have is mainly caused when you're trying to check in files which is no longer exist on the machine.
+To resolve it, go to Source Control Explorer -> select these missing files -> Undo Pending Changes. 
+Or you can just left these files in the Excluded Changes list to not checking them.
