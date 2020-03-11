@@ -1,0 +1,13 @@
+
+How to audit the login
+
+https://www.windowscentral.com/how-tell-who-signed-your-pc
+
+
+1- Use the Windows key + R keyboard shortcut to open the Run command.
+2- Type gpedit.msc and click OK to open the Local Group Policy Editor.
+3- Browse the following path:
+
+4- Computer Configuration > Windows Settings > Security Settings > Local Policies > Audit Policy
+
+5-On the right side, double-click the Audit logon events policy.
