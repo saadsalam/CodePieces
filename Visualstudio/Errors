@@ -1,0 +1,8 @@
+
+Error: VS2015 Busy… waiting for internal operation to complete -
+Solution:
+Donot open the solution from here:
+C:\WPF Projects\ZonarAPICall\ZonarAPICall\ZonarAPICall.sln filr
+Open it from here
+C:\WPF Projects\ZonarAPICall\ZonarAPICall\ZonarAPICall
+ZonarAPICall.csproj file
