@@ -1,0 +1,8 @@
+
+Service.Protected.cs
+-----------------------
+1-protected internal bool GetCurrentLoad(string pDriver, string pPassword, string pTruck, string pDriverId, DataSet dsReturn, 
+int pRunId, bool clearExceptions = true)
+2-protected internal string GetDriverIdFromUserCode(string pUserCode)
+3-protected internal DataTable AddDriverExpense(string pDriver, Expense expense)
+		
