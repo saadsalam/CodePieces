@@ -1,3 +1,18 @@
 
 TransportWebApp Folder
 webconfig has server lists
+
+TransportAdmin/Web.config file:
+-----------------------------
+
+<ServersSection>
+    <servers>
+      <add code = "LOC" name = "LOC" url = "http://192.168.2.222/transportwebapp/Service.svc/soapssl" />
+      <add code = "MOPD" name = "DEV" url = "https://trans1.mophilly.com/transportws/Service.svc/soapssl" />
+      <add code = "DAID" name = "DAI Test" url = "http://alm.diversifiedauto.com:8083/dev/Service.svc/soap" />
+      <add code = "DAI" name = "DAI Production" url = "http://alm.diversifiedauto.com:8083/prod/Service.svc/soap" />
+      <add code = "EXEL" name = "Excel" url = "https://trans1.mophilly.com/transportexcel/Service.svc/soapssl" />
+      <add code = "TRIB" name = "Tribeca" url = "https://trans1.mophilly.com/transporttribeca/Service.svc/soapssl"/>
+      <add code= "OAKW" name="Oakwood" url="https://trans1.mophilly.com/transportoakwood/Service.svc/soapssl"  />
+    </servers>
+  </ServersSection>
