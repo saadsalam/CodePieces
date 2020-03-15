@@ -1,0 +1,27 @@
+
+SELECT E.ExpenseID, 
+                        E.DriverID, E.ItemDate, E.Type, E.Amount, E.ItemDescription, E.BackupReceivedInd, E.TruckNum, 
+                        E.TruckID, E.PaidInd, E.PaidDate, E.CreationDate, E.CreatedBy, E.UpdatedDate,E.UpdatedBy 
+                        FROM Expense E
+                        LEFT JOIN Driver D ON E.DriverID =D.DriverID  
+                        LEFT JOIN Users U ON  D.UserID =U.UserID  
+                        WHERE PaidInd IN (-1,0) AND U.UserCode = 040
+                        
+                        
+  Msg 245, Level 16, State 1, Line 1
+Conversion failed when converting the varchar value 'Colin' to data type int.
+
+Solution: put a quotation comma after "'" + "'"
+ strSQL = @"SELECT E.ExpenseID, 
+                        E.DriverID, E.ItemDate, E.Type, E.Amount, E.ItemDescription, E.BackupReceivedInd, E.TruckNum, 
+                        E.TruckID, E.PaidInd, E.PaidDate, E.CreationDate, E.CreatedBy, E.UpdatedDate,E.UpdatedBy 
+                        FROM Expense E
+                        LEFT JOIN Driver D ON E.DriverID =D.DriverID  
+                        LEFT JOIN Users U ON  D.UserID =U.UserID  
+                        WHERE PaidInd IN (-1,0) ";
+
+           
+            if (!String.IsNullOrEmpty(pDriver))
+            {
+               strSQL = strSQL + "AND U.UserCode = " + "'"+pDriver +"'";
+            }
