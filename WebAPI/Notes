@@ -1,3 +1,17 @@
-
-
 https://nodogmablog.bryanhogan.net/2016/10/web-api-2-controller-with-multiple-get-methods/
+Web API 2 Controller with multiple get methods
+
+
+
+    
+ [RoutePrefix("api/values")]
+ public class ValuesController : ApiController
+
+
+[Route("geta")]
+        public string GetA()
+        {
+            return "A";
+        }
+
+
