@@ -1,3 +1,6 @@
+Mileage calculate types: Practical or National or
+that depends upon trailer /truck (height, weight) of truck. Length doesnt really matters.
+
 Custom/Customer dimensions
 Trip management
 Drag around function
@@ -5,6 +8,9 @@ Calculate mileage using lat long rather than zip codes
 Street level Data
 Profile setup
 Geofencing:
+Bread crum/tracing of route available in pcmiler. 
+hub routing
+Zonar is reselling one part from pc miler.
 -------------
 Geofencing is a location-based service in which an app or other software uses GPS,
 RFID, Wi-Fi or cellular data to trigger a pre-programmed action when a mobile device or 
