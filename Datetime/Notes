@@ -1,5 +1,43 @@
 
 Date time Articles
-
-
+--------------------------
 https://www.c-sharpcorner.com/UploadFile/mahesh/working-with-datetime-using-C-Sharp/
+
+1-Cast
+2-RANGE
+3-BETWEEN
+4-UTF
+5-Date Formats
+
+CAST:
+------
+Select  event,* FROM FreightVerifyExportVehicleVisibility
+where ExportedInd =1
+and CAST(creationdate as date) ='08/26/2019'
+
+
+RANGE:
+---------
+
+DECLARE @StartDate datetime,
+@EndDate datetime
+SELECT @StartDate = '08/25/2019'
+SELECT @EndDate = '08/26/2019'
+
+
+Select  event,* FROM FreightVerifyExportVehicleVisibility
+Where CreationDate >=  @StartDate
+AND CreationDate < DATEADD(day,1,@EndDate)
+
+BETWEEN:
+----------------
+Select  event,* FROM FreightVerifyExportVehicleVisibility
+Where cast(CreationDate as Date) BETWEEN @StartDate AND @EndDate
+
+
+Different Date Formats:
+-----------------------
+	With century	  			Input/Output	Standard
+	101	 mm/dd/yyyy	 		US
+	127	yyyy-mm-ddThh:mi:ss.mmmZ	ISO8601 (with time zone Z)
+	
