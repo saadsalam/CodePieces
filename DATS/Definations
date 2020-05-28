@@ -13,3 +13,9 @@ Loads are created afterward
 When runstops created?
 -----------------------
 Every pickup and delivery event creates the run stops
+
+
+Search Vehicle Locator:
+----------------
+Protected Freight: just a visibility that broker cant see the Vin/Loads
+Associated Find: Whaterver load associated to a particular VIN showed up
