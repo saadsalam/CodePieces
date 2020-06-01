@@ -1,3 +1,7 @@
+0- Subscription dropdown was disabled
+Ans:enable Activescript
+https://support.microsoft.com/en-us/help/3135465/how-to-enable-javascript-in-windows
+
 
 1- Error occured :An error has occurred during report processing.
 Ans: Fix the data source by putting credentials again
