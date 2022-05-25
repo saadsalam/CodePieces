@@ -40,4 +40,17 @@ Different Date Formats:
 	With century	  			Input/Output	Standard
 	101	 mm/dd/yyyy	 		US
 	127	yyyy-mm-ddThh:mi:ss.mmmZ	ISO8601 (with time zone Z)
-	
+
+Datetime2
+--------------
+Issue with earlier dates like 1650
+Select convert(datetime,'5/30/1650')
+error: The conversion of a varchar data type to a datetime data type resulted in an out-of-range value.
+
+Fix
+select convert(datetime2,'5/30/1650')
+
+
+
+
+
