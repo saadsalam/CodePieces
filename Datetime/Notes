@@ -47,6 +47,14 @@ Issue with earlier dates like 1650
 Select convert(datetime,'5/30/1650')
 error: The conversion of a varchar data type to a datetime data type resulted in an out-of-range value.
 
+(there was a bad data)
+
+CID		DateOfOrganization
+E14C83		not a date5
+
+
+
+
 Fix
 select convert(datetime2,'5/30/1650')
 
